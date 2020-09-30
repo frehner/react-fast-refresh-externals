@@ -1,6 +1,6 @@
 # Testing react-refresh
 
-This is to try and debug react-react + react-refresh's webpack plugin in situations where React + ReactDOM are externals
+This is to try and debug react-react + react-refresh's webpack plugin bug issues
 
 ## Start
 

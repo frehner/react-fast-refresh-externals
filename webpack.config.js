@@ -1,4 +1,3 @@
-const ReactRefreshBabel = require("react-refresh/babel");
 const ReactRefreshPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 
 module.exports = {
@@ -13,14 +12,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: [
-          {
-            loader: "babel-loader",
-            options: {
-              plugins: [ReactRefreshBabel],
-            },
-          },
-        ],
+        use: "babel-loader",
       },
     ],
   },

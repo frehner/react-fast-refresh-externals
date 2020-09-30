@@ -1,0 +1,11 @@
+{
+  "presets": [
+    [
+      "@babel/env",
+      {
+        "bugfixes": true
+      }
+    ],
+    "@babel/react"
+  ]
+}

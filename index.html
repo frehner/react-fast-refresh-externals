@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="systemjs-importmap">
+    {
+      "imports": {
+        "react": "https://cdn.jsdelivr.net/npm/@esm-bundle/react@16.13.1/system/react.development.js",
+        "react-dom": "https://cdn.jsdelivr.net/npm/@esm-bundle/react-dom@16.13.1/system/react-dom.development.js",
+        "app": "http://localhost:8081/main.js"
+      }
+    }
+  </script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/systemjs@6.6.1/dist/s.js"
+    crossorigin="anonymous"
+  ></script>
+  <script>System.import('app')</script>
+</head>
+<body>
+  <div id="app"></div>
+</body>
+</html>

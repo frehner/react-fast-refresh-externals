@@ -5,6 +5,7 @@ module.exports = {
   entry: "./index.js",
   output: {
     libraryTarget: "system",
+    publicPath: "",
   },
   externals: ["react", "react-dom"],
   module: {

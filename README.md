@@ -1,6 +1,7 @@
 # Testing react-refresh
 
-This is to try and debug react-react + react-refresh's webpack plugin bug issues
+Just testing out the fast refresh setup with SystemJS
+~~This is to try and debug react-react + react-refresh's webpack plugin bug issues~~
 
 ## Start
 

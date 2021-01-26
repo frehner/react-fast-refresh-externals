@@ -1,11 +1,14 @@
 import React from "react";
+const Other = React.lazy(() =>
+  window.System.import("app2").then((mod) => {
+    return { default: mod.LazyComponent };
+  })
+);
 
 export default function App() {
-  const [state, setState] = React.useState(1);
   return (
-    <div>
-      hello
-      <button onClick={() => setState((prev) => prev + 1)}>{state}</button>
-    </div>
+    <React.Suspense fallback={<div>loading</div>}>
+      <Other />
+    </React.Suspense>
   );
 }

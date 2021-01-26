@@ -3,13 +3,16 @@ const path = require("path");
 
 module.exports = {
   mode: "development",
-  entry: "./index.js",
+  entry: "./app2/other.js",
   output: {
+    uniqueName: "app2",
     libraryTarget: "system",
-    publicPath: "",
-    uniqueName: "app",
+    path: path.resolve(__dirname, "dist"),
+    filename: "[name].js",
+    publicPath: "/",
+    devtoolNamespace: "app2",
   },
-  externals: ["react", "react-dom", "app2"],
+  externals: ["react", "react-dom", "app"],
   module: {
     rules: [
       {
@@ -21,15 +24,14 @@ module.exports = {
   },
   plugins: [new ReactRefreshPlugin()],
   devServer: {
-    port: 8081,
+    port: 8082,
     hot: true,
+    headers: { "Access-Control-Allow-Origin": "*" },
     static: [
       // fixes a bug in webpack-dev-server 4.0.0-beta0 in which it's watching these directories that it shouldn't be
       // see https://github.com/webpack/webpack-dev-server/issues/2936#issuecomment-763960079
-      { directory: path.join(process.cwd(), "public") },
       { directory: path.join(process.cwd(), "node_modules"), watch: false },
       { directory: path.join(process.cwd(), ".git"), watch: false },
-      { directory: path.join(process.cwd(), "app2"), watch: false },
     ],
   },
 };

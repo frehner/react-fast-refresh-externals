@@ -10,7 +10,8 @@
           "react": "https://cdn.jsdelivr.net/npm/@esm-bundle/react@17.0.1/system/react.development.js",
           "react-dom": "https://cdn.jsdelivr.net/npm/@esm-bundle/react-dom@17.0.1/system/react-dom.development.js",
           "app": "http://localhost:8081/main.js",
-          "app2": "http://localhost:8082/main.js"
+          "app2": "http://localhost:8082/main.js",
+          "react-refresh/runtime": "https://cdn.jsdelivr.net/npm/react-refresh@0.9.0/cjs/react-refresh-runtime.development.js"
         }
       }
     </script>
@@ -18,6 +19,19 @@
       src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/system.js"
       crossorigin="anonymous"
     ></script>
+    <script>
+      window.exports = {};
+      window.process = {
+        env: {
+          NODE_ENV: "",
+        },
+      };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/react-refresh@0.9.0/cjs/react-refresh-runtime.development.js"></script>
+    <script>
+      System.set(System.resolve("react-refresh/runtime"), window.exports);
+      delete exports;
+    </script>
     <script>
       System.import("app");
     </script>

@@ -9,7 +9,7 @@ module.exports = {
     publicPath: "",
     uniqueName: "app",
   },
-  externals: ["react", "react-dom", "app2"],
+  externals: ["react", "react-dom", "app2", /^react-refresh.*/],
   module: {
     rules: [
       {

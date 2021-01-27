@@ -12,7 +12,7 @@ module.exports = {
     publicPath: "/",
     devtoolNamespace: "app2",
   },
-  externals: ["react", "react-dom", "app"],
+  externals: ["react", "react-dom", "app", /^react-refresh.*/],
   module: {
     rules: [
       {
